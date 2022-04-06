@@ -1,5 +1,5 @@
-import * as fs from "fs/promises";
-import iconv from "iconv-lite";
+import * as fs from 'fs/promises'
+import iconv from 'iconv-lite'
 
 // mkdir -p /tmp/aaa
 // 例）文字コード指定は無くても動く（）
@@ -12,17 +12,18 @@ const main = async () => {
   const to = process.argv[3]
 
   // Buffer型で読み込む
-  var buf = await fs.readFile("/dev/stdin");
-  let str = iconv.decode(buf, "SHIFT_JIS");
+  const buf = await fs.readFile('/dev/stdin')
+  let str = iconv.decode(buf, from)
 
   // 引数があれば、変換する。無ければUTF-8（OSデフォルト？）で出力される。
   if (to !== undefined) {
     str = iconv.encode(str, to).toString()
   }
-  console.log(str);
+  console.log(str)
 
   // 何か処理をするなら下記で。
   // const list = str.split(/\r\n|\n/);
+  // ...
   // console.log(list.join('\n'));
-};
-main();
+}
+main()
