@@ -1,0 +1,23 @@
+{
+  "name": "char-convert",
+  "version": "1.0.0",
+  "description": "node.jsで文字列変換するプロジェクト",
+  "main": "index.js",
+  "scripts": {
+    "start": "node convert_only.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daijinload/node-char-convert.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daijinload/node-char-convert/issues"
+  },
+  "homepage": "https://github.com/daijinload/node-char-convert#readme",
+  "dependencies": {
+    "iconv-lite": "^0.6.3"
+  }
+}
